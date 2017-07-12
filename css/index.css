@@ -1,0 +1,266 @@
+@charset "UTF-8";
+body{
+	background-color: #FFFFFF;
+	padding:0;
+	margin: 0;
+}
+
+/*header开始*/
+
+.header .banner{
+	padding:0;
+	margin: 0 auto;
+    height: 700px;width: 100%;
+    background: url(../img/1.jpg) repeat ;
+    
+}
+.banner .title{
+	text-align: center;
+	font-family:方正舒体;
+	font-size:50px;	
+}
+.banner .login-regist a{
+	color: #000000;
+	font-size: 15px;
+	font-weight: 600;
+}
+.banner .login-regist li{
+	float: left;
+	margin-right: 15px;
+	list-style: none;
+}
+.style1 a{text-decoration: none;}
+.header-grids{
+	width: 100%;
+	height: 20px;
+	margin-top:139px;
+} 
+.header-grid{
+	height: 373px;
+	width: 350px;
+	background: #fff;
+	padding: 2em 3em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px ;
+	border-radius: 4px;
+	text-align: center;
+	}
+.header-grids .style1{
+	height: 373px;
+	width:313px;
+	/*float: left;*/
+	margin: 5px 0 0 80px;
+	
+}
+.header-grid:hover{
+	background:#a7cb24;
+}
+.gray:hover{
+	background: #bfbfbf;
+}
+.blue:hover{
+	background: #0099e5;
+}
+.green:hover{
+	background: #a7cb24;
+}
+.header-grid:hover .header-grid-img img{
+	border-color: transparent;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	transition:all 0.5s ;
+}
+.header-grid:hover .header-grid-img h3{color:#FFF;}
+.header-grid:hover .header-grid-img p{color:#FFF;}
+.header-grid-img{
+	width: 200px;
+	height: 317px;
+	display: block;
+	margin:20px 0 0 30px;
+	}
+.header-grid-img img{
+	width: 90%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 10px solid #DADADA;
+	border-left-color: #DADADA;
+	margin-top:-20px ;
+}
+.header-grid-img h3{
+	font-size: 30px;
+	font-weight: 600;
+	cursor: text;
+}
+.gray h3{
+	color:#bfbfbf;
+}
+.blue h3{
+	color:#0099e5;
+}
+.green h3{
+	color:#a7cb24;
+}
+.header-grid-img p{
+	font-size: 16px;
+	color: #555555;
+	padding-top: 2px;
+	line-height:25px;
+	
+}
+/*header结束*/
+
+/*section开始*/
+.section{
+		height: 420px;
+		background-color: #FFFFFF;
+}
+.welcome-main{
+		width: 100%;
+		height: 420px;
+		margin-top: 20px;
+}
+.welcome-img{
+		float: right;
+		margin:0 -55px 0 0;
+}
+.welcome-text h3{
+	    font-family: 'Niconne', cursive;
+	    color: #ff4c4c;
+	    font-weight: 600;
+	    font-size: 50px;
+	    margin: 15px 0 10px 0;
+}
+.welcome-text span{
+	    font-style: italic;
+	    color: #616161;
+	    font-size: 20px;
+	    margin:30px;
+	    padding:10px 20px 10px 0;
+}
+.welcome-btn{
+	position: absolute;
+	margin: 30px 0 0 10px;	
+	text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+.welcome-btn .btn{
+	font-size: 20px;
+	line-height: 30px;
+	width: 180px;
+	height: 60px;
+}
+.welcome-btn span{
+	position: absolute;
+	margin:25px 0 0 -10px;
+	font-size: 25px;
+	color:#0F0F0F;
+}
+.welcome-btn:hover{
+	transform: rotate(8deg);
+	transition: all 0.5s;
+	
+}
+/*section结束*/
+
+/*recommend-section开始*/
+.recommend-main{
+	margin-left: -10px;
+}
+.recommend-section h2{
+	font-family: '方正舒体';
+	color: #ff4c4c;
+	 font-weight:800;
+	 font-size:40px;
+}
+.main-text{
+	/*margin:0 20px 0 0;*/
+	margin-right: 25px;
+	float: left;
+}
+.mt-up{
+	margin-top: 15px;
+}
+.mt-up-l{
+	position:relative;
+	width: 30%;
+	height:70px;
+	background-color: #c4c4c4;
+	float: left;
+}
+.in{
+	position:absolute;
+	width: 70%;
+	height:60%;
+	background-color: #fff;
+	margin: 20px 0 0 11px;
+	text-align: center;
+	line-height: 45px;
+	font-size:30px;
+	font-weight: 800;
+	color: #000000;
+}
+.mt-up-r{
+	float: right;
+	width: 65%;
+}
+.mt-up-r h3{
+	color: #F0AD4E;
+	margin: 0 0 5px 30px;
+}
+.mt-up-r .yuanjia{
+	margin-left: 10px;
+	color: #000;
+}
+.mt-up-r .tejia{
+	color:#FF4C4C;
+	font-weight: 600;
+	font-size: 16px;
+}
+.hot-food{
+	width: 200px;
+	height: 300px;
+	float: right;
+	margin:-300px -30px 0 0;
+}
+.hot-food ul{
+	list-style-type: none;
+	margin-left: -80px;
+	text-shadow: 10px 0 10px #F0AD4E;
+	}
+.hot-food li{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	border: 2px dashed #333;
+	border-radius: 5px;
+	padding-left: 5px;
+	font-size: 20px;
+	margin:-1px 0 -1px 0;
+	font-family: 'Meiryo UI';
+	background-color: #eee;
+	}
+.hot-food p{
+	/*float: right;*/
+	margin:-50px 130px 0 130px;
+	font-size: 25px;
+	font-weight: 600;
+	color: orangered;
+}
+.hot-food a{
+	color: #000;
+}
+.hot-food span{
+	margin: 15px;
+	font-size: 12px;
+}
+.hot-food h3{
+	font-family:'方正舒体';
+	font-size:30px;
+	font-weight:600;
+}
+/*recommend-section结束*/
+
+.footer{
+	height: 50px;
+	line-height:50px;
+	background-color: #eee;
+	text-align: center;
+}

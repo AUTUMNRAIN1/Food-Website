@@ -1,0 +1,136 @@
+@charset "utf-8";
+		*{margin:0;padding:0;}
+		.banner{
+			height: auto;
+			background: url(../img/s-banner.png) no-repeat;
+			position: relative;/*改的*/
+		}
+		.banner .title{
+			text-align: center;
+			font-family:方正舒体;
+			font-size:60px;
+			line-height: 200px;
+			font-weight: 600;
+		}
+		.all{
+			width: 100%;
+			height: auto;
+			/*position: absolute;*/
+		}
+		.listtyle1 {
+			margin:20px 30px 100px 58px;
+			background: #fff;
+			height: 332px;
+			width: 232px;
+			/*position: absolute;/*改的*/
+			float: left;
+			display: inline;
+		}
+		.listtyle1 .big {
+			display: block;
+			height: 332px;
+			width: 232px;
+		}
+		.listtyle1 a {
+			/*position: relative;*/
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+			text-decoration: none;
+		}	
+		.listtyle1 a.big .img {
+			height: 232px;
+			width: 232px;
+			display: block;
+		}
+		.listtyle1 a.big .i_w {
+			height: 100px;
+			width: 232px;
+			overflow: hidden;
+		}
+		.listtyle1 a.big .i_w .i {
+			height: 100px;
+			width: 232px;
+		}
+		.listtyle1 a.big .i_w .c1 {
+			text-align: center;
+			height: 100px;
+			width: 232px;
+			overflow: hidden;
+		}
+		.listtyle1 a.big .i_w .c1 strong {
+			display: block;
+			height: 24px;
+			line-height: 8px;
+			padding: 11px 14px 0px;
+			font-size: 18px;
+			color: #333;
+			font-weight: bold;
+			overflow: hidden;
+			margin:15px 0 5px 0;
+		}
+		.listtyle1 .c1 span{
+			display: block;
+			height: 26px;
+			margin-top: 5px;
+			line-height: 26px;
+			padding: 0px 20px 0px;
+			font-size: 16px;
+			color: orangered;
+			font-weight: 600;
+			text-align: center;
+		}
+		.listtyle1 .c1 span .glyphicon{
+			display: inline-block;
+		}
+		.listtyle1 a.big .i_w .c2 {
+			height: 100px;
+			width: 232px;
+			overflow: hidden;
+			background: #eee;	
+		}
+		.i_w .c2 p{
+			color:#000;
+			font-size: 20px;
+			margin-left: 20px;
+			display: inline-block;
+		}
+		.i_w .c2 span{
+			display: inline-block;
+			color: #FF4500;
+			font-size: 20px;
+			margin:8px 0 0 8px;
+		}
+		.listtyle1 .gx {
+			position: absolute;
+			display: inline-block;
+			vertical-align: top;
+			height: 38px;
+			right: -6px;
+			top: 12px;
+		}
+		.listtyle1 .gx span {
+			display: inline-block;
+			vertical-align: top;
+			height: 32px;
+			padding: 0px 12px;
+			background: #60a531;
+			line-height: 32px;
+			color: #fff;
+			box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+			font-size: 14px;
+		}
+		.blue{
+			color: red;
+		}
+		
+.footer{
+	height: 50px;
+	line-height:50px;
+	background-color: #eee;
+	text-align: center;
+	
+	}

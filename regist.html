@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title>用户注册页面</title>
+		<script src="js/common/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="bootstrap-3.3.0-dist/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/regist.js" type="text/javascript" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/regist.css"/>	
+		<style>
+			@media screen and (min-width:319px) and (max-width:360px) {
+				form{
+    				width: 200px;
+    				margin: 100px auto;
+    				}
+    			.title{
+					font-size: 15px;
+					margin-left: 60px;
+					}
+				.btn{
+    				font:600 10px "宋体";
+    				width: 150px;
+				}
+				.regi-inp{
+  				    width: 100px;
+    				height: 15px;
+    				padding:4px;
+				}
+				lable{
+					font-size: 10px;
+				}
+			}
+		</style>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend class="title">用户注册</legend>
+        <p>
+            <lable>账&nbsp&nbsp号:</lable>
+            <input type="text" name="myzh" id="zh" placeholder="账号" class="regi-inp">
+        </p>
+        <p>
+            <lable>密&nbsp&nbsp码:</lable>
+            <input type="text" name="password" id="mm" placeholder="密码" class="regi-inp"></p>
+        <p>
+            <lable>电话号码:</lable>
+            <input type="text" name="phone" id="hm" placeholder="电话号码" class="regi-inp"></p>
+        <p>
+            <lable>电子邮箱:</lable>
+            <input type="text" name="mail" id="mail" placeholder="电子邮箱" class="regi-inp">
+        </p>
+        <input type="button" class="btn" value="提交">
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+form{
+    width: 400px;
+    background: whitesmoke;
+    padding: 10px;
+    margin: 130px auto;
+}
+fieldset{
+	border:none;
+	font-family: Arial, "寰蒋闆呴粦";
+    text-align: center;
+}
+.title{
+	background-color: #FF4C4C;
+	border-radius: 10px;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-left: 150px;
+	}
+.btn{
+    background-color:#FF4C4C;
+    border-radius: 5px;
+    padding: 6px 16px 6px 16px;
+    font:600 16px "宋体";
+    width: 300px;
+}
+.btn:hover{
+    background: #F587A8;
+}
+.regi-inp{
+    padding: 8px;
+    background: #f8f8f8;
+    width: 200px;
+    height: 20px;
+    border: 1px solid #FF4C4C;
+}
+
+/*使点击框时框出现背景色，更美观*/
+input:focus{
+    padding: 9px;
+    background: #FFC0CB;
+}

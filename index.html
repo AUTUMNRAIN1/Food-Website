@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>美食天下</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/common/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="bootstrap-3.3.0-dist/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.0-dist/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>		
+    <style>
+    	@media screen and (min-width:799px) and (max-width:980px) {
+    		.header-grid{height: 423px;width: 250px;}
+    		.header-grids .style1{height: 423px;width:213px;margin: 5px 0 0 50px;}
+    		.header-grid-img{width: 120px;height: 237px;margin:20px 0 0 25px;}
+    		
+    		.welcome-img{float: right;margin:65px 0 0 20px;}
+    		.welcome-img img{width: 500px;height: 300px;}
+    		.welcome-btn{margin: 10px 0 0 10px;}
+			.welcome-btn .btn{width: 130px;height: 40px;}
+			.welcome-btn .btn-text{font-size: 15px;line-height: 30px;}
+			.welcome-btn:hover{transform: rotate(0deg);}
+			.welcome-btn span{display: none;}
+			
+			.recommend-section h2{margin-left: -80px;}
+			.recommend-main{margin-left: -95px;width: 1000px;}
+			.recommend-main .main-text img{width: 200px;height: 160px;}
+			.recommend-main .main-text{float: left;margin: 0;}
+			.mt-up-l{width: 30%;height:60px;}
+			.mt-up-l .in{font-size: 15px;margin: 10px 0 0 5px;line-height: 25px;}
+			.mt-up-r h3{margin: 0 0 5px 5px;font-size: 15px;}
+			.mt-up-r .yuanjia{margin-left: 5px;font-size: 10px;}
+			.mt-up-r .tejia{font-weight: 600;font-size: 10px;}
+			.recommend-section .hot-food{display: none;}
+    	}
+    	@media screen and (min-width:767px) and (max-width:800px) {
+    		.header-grid{height: 363px;width: 200px;}
+    		.header-grids .style1{height: 423px;width:183px;margin: 5px 73px 0 0 ;}
+    		.header-grid-img{width: 100px;height: 217px;margin:20px 0 0 10px;}
+    		.header-grid-img h3{font-size: 15px;font-weight:700;}
+    		
+    		.welcome-img{float: right;margin:65px 0 0 0;}
+    		.welcome-btn{margin: 10px 0 0 10px;}
+			.welcome-btn .btn{width: 130px;height: 40px;}
+			.welcome-btn .btn-text{font-size: 15px;line-height: 30px;}
+			.welcome-btn:hover{transform: rotate(0deg);}
+			.welcome-btn span{display: none;}
+			.recommend-section .hot-food{display: none;}
+    	}
+    	@media screen and (min-width:361px) and (max-width:768px) {
+    		.header .banner{height: 500px;}
+    		.header-grid{height: 183px;width: 180px;}
+    		.header-grids .style1{height: 223px;width:100px;margin: 5px 20px 0 73px;}
+    		.header-grid-img{width: 100px;height: 117px;margin:20px 0 0 0;}
+    		.header-grid-img h3{font-size: 15px;font-weight:600;}
+    		.header-grid-img img{border: 5px solid #DADADA;}
+    		.header-grid-img p{display: none;}
+    		
+    		.welcome-img{float: right;margin:65px 0 0 0;}
+    		.welcome-btn{margin: 10px 0 0 10px;}
+			.welcome-btn .btn{width: 130px;height: 40px;}
+			.welcome-btn .btn-text{font-size: 15px;line-height: 30px;}
+			.welcome-btn:hover{transform: rotate(0deg);}
+			.welcome-btn span{display: none;}
+			.recommend-section .hot-food{display: none;}
+    	}
+    	@media screen and (min-width:321px) and (max-width:360px) {
+    		.header .banner{height: 350px;}
+    		.header-grids{margin: 50px 10px;}
+    		.header-grid{height: 150px;width: 50px;}
+    		.header-grids .style1{height: 50px;width:50px;margin: 0 50px 60px 0;}
+    		.header-grid-img{width: 80px;height: 80px;margin:5px 0 0 -40px;}
+    		.header-grid-img h3{font-size: 15px;font-weight:700;}
+    		.header-grid-img img{border: 5px solid #DADADA;width: 50%;}
+    		.header-grid-img p{display: none;}
+    		
+    		.section{height: 420px;}
+			.welcome-main{width: 100%;height: 420px;margin-top: 20px;}
+			.welcome-img{float: right;margin:45px 0 0 0;}
+			.welcome-img img{width: 248px;height: 150px;}
+			.welcome-text h3{font-weight: 600;font-size: 25px;margin: 0 -10px 0 0;}
+			.welcome-text span{font-size: 10px;margin:30px;padding:10px 20px 10px 0;}
+			.welcome-btn{margin: 10px 0 0 10px;}
+			.welcome-btn .btn{width: 80px;height: 30px;}
+			.welcome-btn .btn-text{font-size: 10px;line-height: 20px;}
+			.welcome-btn span{display: none;}
+			
+			.recommend-section h2{font-size:20px;}
+			.recommend-main .main-text img{width: 120px;height: 80px;}
+			.recommend-main .main-text{float: left;margin: 0;}
+			.mt-up-l{width: 30%;height:40px;}
+			.mt-up-l .in{font-size: 15px;margin: 10px 0 0 5px;line-height: 25px;}
+			.mt-up-r h3{margin: 0 0 5px 5px;font-size: 15px;}
+			.mt-up-r .yuanjia{margin-left: 5px;font-size: 10px;}
+			.mt-up-r .tejia{font-weight: 600;font-size: 10px;}
+			.recommend-section .hot-food{display: none;}
+			.footer{font-size: 12px;}
+    	}
+    	@media screen and (min-width:300px) and (max-width:320px) {
+    		.header .banner{height: 350px;}
+    		.header-grids{margin: 50px auto;}
+    		.header-grid{height: 150px;width: 50px;}
+    		.header-grids .style1{height: 50px;width:50px;margin: 0 40px 60px 0;}
+    		.header-grid-img{width: 80px;height: 80px;margin:5px 0 0 -40px;}
+    		.header-grid-img h3{font-size: 15px;font-weight:700;}
+    		.header-grid-img img{border: 5px solid #DADADA;width: 50%;}
+    		.header-grid-img p{display: none;}
+    		
+    		.section{height: 420px;}
+			.welcome-main{width: 100%;height: 420px;margin-top: 20px;}
+			.welcome-img{float: right;margin:45px 10px 0 0;}
+			.welcome-img img{width: 248px;height: 150px;}
+			.welcome-text h3{font-weight: 600;font-size: 25px;margin: 0 -10px 0 0;}
+			.welcome-text span{font-size: 10px;margin:30px;padding:10px 20px 10px 0;}
+			.welcome-btn{margin: 10px 0 0 10px;}
+			.welcome-btn .btn{width: 80px;height: 30px;}
+			.welcome-btn .btn-text{font-size: 10px;line-height: 20px;}
+			.welcome-btn span{display: none;}
+			
+			.recommend-section h2{font-size:20px;}
+			.recommend-main .main-text img{width: 100px;height: 80px;}
+			.recommend-main .main-text{float: left;margin-right: 0;}
+			.mt-up-l{width: 30%;height:40px;}
+			.mt-up-l .in{font-size: 15px;margin: 9px 0 0 5px;line-height: 20px;}
+			.mt-up-r h3{margin: 0 0 5px 5px;font-size: 10px;}
+			.mt-up-r .yuanjia{margin-left: 5px;font-size: 8px;}
+			.mt-up-r .tejia{font-weight: 600;font-size:6px;}
+			.recommend-section .hot-food{display: none;}
+			.footer{font-size: 12px;}
+    	}
+    	
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="header">
+		<div class="banner">
+			<p class="title">Order Your Like</p>
+			<ul class="login-regist" style="float: left;margin-top: 0;">
+				<li><a href="regist.html" style="color: #FF0000;">注册</a></li>
+				<li><a href="login.html">登录</a></li>				  
+			</ul>					
+			
+			<!--bookstrap的导航条开始-->
+				
+			<!--bookstrap的导航条结束-->
+			
+			<div class="header-grids">
+				<div class="col-xs-12 col-sm-4 col-md-4 style1">
+					<a href="style1.html">
+						<div class="header-grid gray">
+							<div class="header-grid-img gray-grid">
+								<img src="img/2.jpg" />
+								<h3>中式美食</h3>
+								<p>
+									及时快餐 各类小炒
+									各类 &nbsp;炒粉 炒面 汤粉 汤面 
+									粥类 汤类	
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+				<div class="col-xs-12 col-sm-4 col-md-4 style1">
+					<a href="style1.html" >
+						<div class="header-grid blue">
+							<div class="header-grid-img gray-grid">
+								<img src="img/011.png" />
+								<h3>奶茶甜品</h3>
+								<p>
+									   布丁系列 鲜果百搭系列&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 龟苓膏系列 
+									          芋圆系列   烧仙草系列								     					
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+				<div class="col-xs-12 col-sm-4 col-md-4 style1" style="margin-left: ;">
+					<a href="style1.html">
+						<div class="header-grid green">
+							<div class="header-grid-img gray-grid">
+								<img src="img/3.jpg" />
+								<h3>休闲小食</h3>
+								<p>
+									各类烧烤 小菜 饮料 
+									花生 玉米等粗粮
+										
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+		    </div>
+        </div>
+    </div>
+    <div class="section">
+		<!--<div class="welcome">-->
+			<div class="container col-xs-12 col-sm-12 col-md-12">
+				<div class="welcome-main">
+					<div class="welcome-text col-xs-12 col-sm-12 col-md-6">
+						<h3 style="font-family: '方正舒体'">招牌菜式</h3>
+						<span>&nbsp;鲜虾去头去皮留虾尾，用牙签挑去背部虾线，用小刀在腹部切几刀切开虾筋，小心别切断,
+							将处理好的虾放在盆里，将盐、料酒、生抽和五香粉放入拌匀腌制半小时,
+							干面包片一片包在保鲜袋中用擀面杖擀成碎屑，海苔拆开包装揉碎与面包屑拌匀备用,
+							将鸡蛋打散，准备好面粉，先将腌好的虾裹一层面粉，再提着虾尾沾上蛋液，最后在面包糠里滚一下,
+							依次做好摆放在盘中,
+							锅中倒入油烧热后转小火，倒入虾炸至双面金黄色即可.						
+						</span>					
+						<div class="welcome-btn col-xs-12 col-sm-12 col-md-12">
+						<a href="#">
+							<button type="button" class="btn btn-warning">
+								<p class="btn-text">进入我滴大虾</p>
+								<span class="glyphicon glyphicon-arrow-right"></span>
+							</button>
+							
+						</a>
+						</div>
+					</div>
+					
+					<div class="welcome-img col-xs-12 col-sm-12 col-md-6">
+						<img src="img/主食/镇店之宝.png" />
+					</div>
+				</div>
+			</div>
+		<!--</div>-->
+    </div>
+    <div class="recommend-section">
+    	<div class="container">
+    		<h2>每天菜式</h2>
+    		<div class="recommend-main">
+    			
+    			<div class="col-md-3 main-text">
+    				<a href="#">
+    					<img src="img/主食/f1.jpg" />
+    					<div class="mt-up">
+    						<div class="mt-up-l">
+    							<div class="in">1</div>
+    						</div>
+    						<div class="mt-up-r">
+    							<h3>黄焖烧鸭</h3>
+    							<p class="yuanjia">估价：20元/份<br /></p>
+    							<p class="tejia">预计完成时间：1小时</p>
+    						</div>
+    					</div>
+    				</a>  				
+    			</div>
+    			
+    			<div class="col-md-3 main-text">
+    				<a href="#">
+    					<img src="img/主食/f2.jpg" />
+    					<div class="mt-up">
+    						<div class="mt-up-l">
+    							<div class="in">2</div>
+    						</div>
+    						<div class="mt-up-r">
+    							<h3>黄焖烧鸭</h3>
+    							<p class="yuanjia">估价：20元/份<br /></p>
+    							<p class="tejia">预计完成时间：1小时</p>
+    						</div>
+    					</div>
+    				</a>  				
+    			</div>
+    			
+    			<div class="col-md-3 main-text">
+    				<a href="#">
+    					<img src="img/主食/f3.jpg" />
+    					<div class="mt-up">
+    						<div class="mt-up-l">
+    							<div class="in">3</div>
+    						</div>
+    						<div class="mt-up-r">
+    							<h3>黄焖烧鸭</h3>
+    							<p class="yuanjia">估价：20元/份<br /></p>
+    							<p class="tejia">预计完成时间：1小时</p>
+    						</div>
+    					</div>
+    				</a>  				
+    			</div>
+    			
+    			<div class="col-md-3 main-text">
+    				<a href="#">
+    					<img src="img/主食/f4.jpg" />
+    					<div class="mt-up">
+    						<div class="mt-up-l">
+    							<div class="in">4</div>
+    						</div>
+    						<div class="mt-up-r">
+    							<h3>黄焖烧鸭</h3>
+    							<p class="yuanjia">估价：20元/份<br /></p>
+    							<p class="tejia">预计完成时间：1小时</p>
+    						</div>
+    					</div>
+    				</a>  				
+    			</div>
+    			
+    			<div class="col-md-3 main-text">
+    				<a href="#">
+    					<img src="img/主食/f1.jpg" />
+    					<div class="mt-up">
+    						<div class="mt-up-l">
+    							<div class="in">5</div>
+    						</div>
+    						<div class="mt-up-r">
+    							<h3>黄焖烧鸭</h3>
+    							<p class="yuanjia">估价：20元/份<br /></p>
+    							<p class="tejia">预计完成时间：1小时</p>
+    						</div>
+    					</div>
+    				</a>  				
+    			</div>
+    			
+    			<div class="col-md-3 main-text">
+    				<a href="#">
+    					<img src="img/主食/f1.jpg" />
+    					<div class="mt-up">
+    						<div class="mt-up-l">
+    							<div class="in">6</div>
+    						</div>
+    						<div class="mt-up-r">
+    							<h3>黄焖烧鸭</h3>
+    							<p class="yuanjia">估价：20元/份<br /></p>
+    							<p class="tejia">预计完成时间：1小时</p>
+    						</div>
+    					</div>
+    				</a>  				
+    			</div>
+    			   			
+    		</div>
+    		<div class="hot-food" id="hot-food">
+    			<h3 style="">热门推荐</h3>
+    			<ul >
+    				<li><a href="">黑椒梅花肉</a><p>13¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>15¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>16¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>18¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>17¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>15¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>18¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>19¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>22¥</p></li>
+    				<li><a href="">黑椒梅花肉</a><p>26¥</p></li>
+    			</ul>
+    			<script>
+//  				var lis = document.getElementById("hot-food").getElementsByTagName('li');
+//					for( var i=0; i<=lis.length;i++){
+//						//this指代当前元素，下面一定要用this，不然不知道指哪个lis[i]
+//						lis[i].onmouseover = function(){
+//							this.style.background = "#F5E79E";
+//							this.style.fontSize = "23px";
+//						}
+//						lis[i].onmouseout = function(){
+//							this.style.background = "#eee";
+//							this.style.fontSize = "20px";
+//						}
+//					}
+    			</script>
+    		</div>
+    	</div>
+    </div>
+    <div class="footer">
+    	欢迎来到陈秋宇的美食分享网站，更多精彩敬请期待！
+    </div>
+</div>
+
+</body>
+</html>

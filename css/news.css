@@ -1,0 +1,90 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+.banner{
+	height: auto;
+	background: url(../img/s-banner.png) no-repeat;
+	background-color: palegoldenrod;
+}
+.banner .title{
+	text-align: center;
+	font-family:方正舒体;
+	font-size:60px;
+	line-height: 200px;
+	font-weight: 600;
+}
+
+.content2{
+	margin-top: 10px;
+	height: auto;
+}
+.process{
+	float: left;
+	height: 505px;
+	background-color: white;
+}
+.content2 .process p{font-size: 20px;}
+.content2 .content-t-p1{	
+	float: left;
+	font-weight: 600;
+	margin: 10px 0 0 0;
+	}
+.content2 .content-t-p2{	
+	margin: 10px 0 0 0;
+	float: right;
+	font-size: 15px;
+	
+	}
+.new{
+	background-color: cornsilk;
+	height: auto;
+}
+.new1{
+	height: 200px;
+	border: 1px solid #E38D13;
+	background-color: white;
+	
+}
+.new2{
+	/*width: 312px;*/
+	margin-top: 5px;
+	height: 300px;
+	border: 1px solid #E38D13;
+	background-color: white;
+}
+.new .new-title{
+	font-size: 20px;
+	text-align: center;
+	margin:10px 0 0 -30px;
+}
+.new .more{
+	float: right;
+	margin:-30px 6px 0 0;
+	font-size: 20px;
+}
+.new .news-li {
+    margin:5px 0 0 35px;
+    border-radius: 3px;
+    line-height: 25px;
+    font-size: 10px;
+	cursor:pointer;
+}
+.new .news-li a{
+	color: #666;font-size:20px;
+	font-family: "方正舒体";
+	/*超长标题的解决*/
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	display:block;
+	/*超长标题的解决*/
+}
+
+.footer{
+	height: 50px;
+	line-height:50px;
+	background-color: #eee;
+	text-align: center;
+}

@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style1-1.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.0-dist/dist/css/bootstrap.min.css"/>
+		<script src="js/common/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap-3.3.0-dist/dist/js/bootstrap.min.js" type="text/javascript"></script>
+		
+		<script src="carousel-slider.slider/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    	<script src="carousel-slider.slider/js/jssor.slider-22.0.6.mini.js" type="text/javascript"></script>
+    		<script type="text/javascript">
+    		window.onload=function(){
+    			var scroll = document.getElementById('scroll');
+				var ul = scroll.children[0];
+				var num = 0;//控制左侧的值 left
+				var timer = null;//加个定时器
+				timer = setInterval(autoPlay,10);//加个定时器
+				function autoPlay(){
+					num--;
+					num<=-1800?num=0:num;
+					ul.style.left = num + "px";
+				}
+				scroll.onmouseover = function(){
+					clearInterval(timer);
+				}
+				scroll.onmouseout = function(){
+					timer = setInterval(autoPlay,10);
+				}
+    		}
+				
+		</script>
+		<style>
+    	@media screen and (min-width:321px) and (max-width:360px) {
+    		body{background-color: palegoldenrod;}
+    		.banner{height: 100px;}
+    		.banner .title{font-size: 30px;line-height: 100px;}
+    		.box{height: 100px;}
+    		.box img{width: 100px;height: 100px;}
+    		.content1{height: 250px;}
+    		.content-l{width: 80px;height: 200px;}
+    		.content-l img{width: 80px;height: 200px;}
+    		.content-r{width: 220px;height: 200px;background-color: #fff;}
+    		.content-r strong{font-size: 15px;margin-left: 0;}
+    		.content-r .use{display: none;}
+  			.content-r .cailiao{height: 100px;margin-top: 0;}
+  			.content-r .cailiao-title{display: none;}
+  			.content-r .cailiao div{height: 25px;margin-bottom: 20px;}
+  			.content-r .cailiao button{width: 30px;height: 30px;font-size: 12px;margin:35px 0 35px 0;}
+  			.content-r .cailiao-p{margin: -60px 0 0 50px;font-size: 15px;}
+  			.content-r .content-r-a{font-size: 15px;}
+  			.content2{height: auto;}
+  			.content2 .process{height: auto;margin-bottom: 5px;}
+  			.content2 .process p{font-size: 15px;}			
+  			.content2 .new{display: none;}
+  			.footer{font-size: 12px;}
+    	}
+    	@media screen and (min-width:300px) and (max-width:320px) {
+    		body{background-color: palegoldenrod;}
+    		.banner{height: 100px;}
+    		.banner .title{font-size: 30px;line-height: 100px;}
+    		.box{height: 100px;}
+    		.box img{width: 100px;height: 100px;}
+    		.content1{height: 240px;}
+    		.content-l{width: 80px;height: 200px;}
+    		.content-l img{width: 80px;height: 180px;}
+    		.content-r{width: 180px;height: 180px;background-color: #fff;}
+    		.content-r strong{font-size: 15px;margin-left: 0;}
+    		.content-r .use{display: none;}
+  			.content-r .cailiao{height: 100px;margin-top: -10px;}
+  			.content-r .cailiao-title{display: none;}
+  			.content-r .cailiao div{height: 25px;margin-bottom: 20px;}
+  			.content-r .cailiao button{width: 30px;height: 30px;font-size: 12px;margin:35px 0 35px 0;}
+  			.content-r .cailiao-p{margin: -60px 0 0 50px;font-size: 12px;}
+  			.content-r .content-r-a{font-size: 15px;}
+  			.content2{height: auto;}
+  			.content2 .process{height: auto;margin-bottom: 5px;}
+  			.content2 .process p{font-size: 15px;}			
+  			.content2 .new{display: none;}
+  			.footer{font-size: 10px;}
+    	}
+    	
+	</style>
+	</head>
+	<body>
+		<div class="banner container-fluid col-xs-12 col-sm-12 col-md-12" id="banner">
+			<p class="title">Order Your Like</p>
+				<!--bookstrap的导航条开始-->
+				<nav class="navbar navbar-default " role="navigation">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="#">中式美食</a>
+				    </div>
+				
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li class=""><a href="#">奶茶甜品</a></li>
+				        <li><a href="#">休闲小吃</a></li>				  
+				      </ul>
+				      <form class="navbar-form navbar-left" role="search">
+				        <div class="form-group">
+				          <input type="text" class="form-control" placeholder="椒盐虾">
+				        </div>
+				        <button type="submit" class="btn btn-default">搜索</button>
+				      </form>
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><a href="#">美食搭配</a></li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown">视频 <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+				          </ul>
+				        </li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+				<!--bookstrap的导航条结束-->
+				
+				<!--轮播图片开始-->			   	
+			   	<div class="box container " id="scroll">
+					<ul>
+						<li><img src="img/中式菜/中式1.jpg"><a href=""></a></li>
+						<li><img src="img/中式菜/中式2.jpg"></li>
+						<li><img src="img/中式菜/中式3.png"></li>
+						<li><img src="img/中式菜/中式4.jpg"></li>
+						<li><img src="img/中式菜/中式5.jpg"></li>
+						<li><img src="img/中式菜/中式1.jpg"></li>
+						<li><img src="img/中式菜/中式2.jpg"></li>
+						<li><img src="img/中式菜/中式3.png"></li>
+						<li><img src="img/中式菜/中式4.jpg"></li>
+						<li><img src="img/中式菜/中式5.jpg"></li>
+						<li><img src="img/中式菜/中式1.jpg"></li>
+						<li><img src="img/中式菜/中式2.jpg"></li>
+						<li><img src="img/中式菜/中式4.jpg"></li>
+						<li><img src="img/中式菜/中式5.jpg"></li>
+						<li><img src="img/中式菜/中式1.jpg"></li>
+						<li><img src="img/中式菜/中式2.jpg"></li>
+						<li><img src="img/中式菜/中式2.jpg"></li>
+						<li><img src="img/中式菜/中式4.jpg"></li>
+						<li><img src="img/中式菜/中式5.jpg"></li>
+						<li><img src="img/中式菜/中式1.jpg"></li>
+						<li><img src="img/中式菜/中式2.jpg"></li>
+					</ul>
+				</div>
+			   <!--轮播图片结束-->
+					
+				<div class="content1 container">
+				<!--单品材料介绍开始-->
+						<p class="content-p">美食贴士</p>
+						<div class="content-l col-xs-12 col-sm-4 col-md-4" style="">
+							<img src="img/中式菜/中式1.jpg" />
+						</div>
+						<div class="content-r col-xs-12 col-sm-8 col-md-8" style="">
+							<strong>蒜蓉开背虾</strong><a href="" class="content-r-a">留言</a>
+							<div class="use">
+								<li class="cr-btn cr-btn1">强身健体</li>
+								<li class="cr-btn cr-btn2">补钙</li>
+								<li class="cr-btn cr-btn3">强身健体</li>
+								<li class="cr-btn cr-btn4">强身健体</li>
+							</div>
+							<div class="cailiao">
+								<p class="cailiao-title">用料</p>
+								<div class="zhuliao" >
+									<button class="cailiao-btn">主料</button>
+									<p class="cailiao-p">虾&nbsp;&nbsp;&nbsp;10只</p>				
+								</div>
+								<div class="fuliao">
+									<button class="cailiao-btn" style="background-color: #eee;">辅料</button>
+									<p class="cailiao-p">蒜蓉&nbsp;&nbsp;&nbsp;葱&nbsp;&nbsp;&nbsp;蒜泥</p>
+								</div>
+								<div class="fuliao">
+									<button class="cailiao-btn">调料</button>
+									<p class="cailiao-p">食用盐&nbsp;&nbsp;&nbsp;料酒&nbsp;&nbsp;&nbsp;芝麻油
+									&nbsp;&nbsp;&nbsp;辣椒酱&nbsp;&nbsp;&nbsp;黑胡椒
+									</p>
+								</div>
+							</div>			
+						</div>					
+					<!--</div>-->
+				</div>
+				<!--单品材料介绍结束-->
+				
+				<div class="content2 container">
+					<!--单品过程介绍开始-->
+					<div class="process col-xs-12 col-sm-7 col-md-7">
+						<p class="content-t-p1">蒜蓉开背虾的做法</p><hr />								
+							<p>1.虾清洗干净，从背部划开，挑去虾肠</p>												
+							<p>2.开背后的虾，倒入料酒和盐，腌制10分钟左右</p>						
+							<p>3.蒜瓣和葱均切细末，调入芝麻油，蒜蓉辣椒酱，黑胡椒拌匀，待用</p>
+							<p>4.拌好的蒜蓉，填塞在虾背部</p>	
+							<p>5.烤盘铺油纸，塞好蒜泥的虾，整齐摆放在烤盘上，烤箱温度调200度，时间15分钟即可</p>
+							
+					</div>
+					<!--单品过程介绍结束-->
+				
+					<!--新闻模块开始-->
+					<div class="new col-xs-12 col-sm-5 col-md-5">
+						<div class="new1">
+							<p class="new-title">烹饪技巧</p>
+	                    	<a href="#" class="more">更多>></a>
+	                   		<ul>
+		                    	<li class="news-li"><a href="news.html" title="大学生">高压锅有哪些神奇用途？</a></li>
+			                    <li class="news-li"><a href="news.html" title="大规模">如何炒面炒饭不粘锅</a></li>
+			                    <li class="news-li"><a href="news.html" title="幼儿">立春时节吃韭菜和豌豆</a></li>
+			                    <li class="news-li"><a href="news.html" title="如何">山楂粥 去除淤血增食欲</a></li>
+			                    <li class="news-li"><a href="news.html" title="教育发">各种干货的张发方法</a></li>                  
+	                   		</ul>
+						</div>
+						<div class="new2">
+							<p class="new-title">烹饪技巧</p>
+	                    	<a href="#" class="more">更多>></a>
+	                   		<ul>
+		                    	    <li class="news-li"><a href="news.html" title="大学生">高压锅有哪些神奇用途？</a></li>
+			                    <li class="news-li"><a href="news.html" title="大规模">如何炒面炒饭不粘锅</a></li>
+			                    <li class="news-li"><a href="news.html" title="幼儿">立春时节吃韭菜和豌豆</a></li>
+			                    <li class="news-li"><a href="news.html" title="如何">山楂粥 去除淤血增食欲</a></li>
+			                    <li class="news-li"><a href="news.html" title="教育发">各种干货的张发方法</a></li>
+			                    <li class="news-li"><a href="news.html" title="幼儿">立春时节吃韭菜和豌豆</a></li>
+			                    <li class="news-li"><a href="news.html" title="如何">山楂粥 去除淤血增食欲</a></li>
+			                    <li class="news-li"><a href="news.html" title="教育发">各种干货的张发方法</a></li>
+	                   		</ul>
+						</div>		
+					</div>
+					<!--新闻模块结束-->
+				</div>
+			<div class="footer container-fluid col-xs-12 col-sm-12 col-md-12">
+    			欢迎来到陈秋宇的美食分享网站，更多精彩敬请期待！
+   			</div>
+		</div><!--container-->	
+		
+			
+		
+	</body>
+</html>
